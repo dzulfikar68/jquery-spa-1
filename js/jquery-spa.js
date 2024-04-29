@@ -60,3 +60,12 @@ $(document).on('click','[data-link]', function (e) {
    $("#container").html(pageContent);//load content into main div
   });
 });
+
+window.onbeforeunload = function(e) {
+   e.preventDefault()
+   return false;
+}
+
+$("#xxx").click(function(){
+   $("#container").load("template.html")
+ });
